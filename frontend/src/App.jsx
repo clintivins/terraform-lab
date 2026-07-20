@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import './App.css'
 
-const API_BASE = 'http://localhost:8000'
+const API_BASE = import.meta.env.PROD ? '/api' : 'http://localhost:8000'
 
 function App() {
   const [question, setQuestion] = useState('')

@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: agent/Dockerfile
+    container_name: infra-ops-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - agent/.env
+    volumes:
+      - ~/.kube:/root/.kube:ro
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: infra-ops-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
