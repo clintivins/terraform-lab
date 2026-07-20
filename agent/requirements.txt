@@ -1,0 +1,7 @@
+langchain==0.3.7
+langchain-anthropic==0.3.0
+langgraph==0.2.53
+fastapi==0.115.5
+uvicorn==0.32.1
+python-dotenv==1.0.1
+requests==2.32.3

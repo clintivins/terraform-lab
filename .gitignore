@@ -2,4 +2,9 @@
 *.tfstate
 *.tfstate.backup
 actions-runner/
-actions-runner/
+agent/venv/
+agent/.env
+agent/__pycache__/
+frontend/node_modules/
+frontend/dist/
+.env
